@@ -83,3 +83,7 @@ allure {
         }
     }
 }
+allureReport {
+    clean = true
+}
+test.finalizedBy 'allureReport'

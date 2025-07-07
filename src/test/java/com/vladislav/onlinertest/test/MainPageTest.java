@@ -19,27 +19,20 @@ public class MainPageTest {
 
     @BeforeEach
     public void setup() {
-
-
         this.driver = WebDriverSingleton.getDriver();
         this.mainPage = new MainPage(this.driver);
     }
-
-
-
-
-
-
 
     @Test
     public void secondTest() {
         mainPage.open();
         String expectedProductName = "Телефон Samsung Galaxy S25 SM-S931B 12GB/128GB (голубой)";
         SearchResultsPage resultsPage = mainPage.inputText(expectedProductName);
-        String actualProductName = resultsPage.getActualProductName(expectedProductName);
+        String actualProductName = resultsPage.getActualProductName();
+        System.out.println(actualProductName);
         resultsPage.openProductPricesPage(expectedProductName, driver)
                         .addProductToCart();
-        ProductPricesPage productPricesPage = new ProductPricesPage(driver);
+        ProductPricesPage productPricesPage = new ProductPricesPage();
         productPricesPage.openCart();
         CartPage cartPage = new CartPage(driver);
         cartPage.removeFirstProduct();
@@ -49,10 +42,6 @@ public class MainPageTest {
                 actualProductName,
                 "Название найденного товара не совпадает с искомым."
         );
-
-
-
-
     }
 
     @AfterEach

@@ -1,5 +1,6 @@
 package com.vladislav.onlinertest.core.driver;
 
+import com.vladislav.onlinertest.utils.CustomWebDriverListener;
 import lombok.extern.log4j.Log4j2;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.events.EventFiringDecorator;

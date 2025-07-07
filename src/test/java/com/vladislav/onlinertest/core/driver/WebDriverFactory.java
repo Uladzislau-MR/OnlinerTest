@@ -77,6 +77,7 @@ public class WebDriverFactory {
 
     private static FirefoxOptions getFirefoxOptions() {
         FirefoxOptions firefoxOptions = new FirefoxOptions();
+        firefoxOptions.setBinary("C:\\Program Files\\FirefoxPortable\\FirefoxPortable.exe");
         FirefoxProfile profile = new FirefoxProfile();
 
         // Settings for managing file downloads
@@ -102,8 +103,8 @@ public class WebDriverFactory {
         // Disables the use of /dev/shm, which solves issues with Chrome crashing in Docker containers
         options.addArguments("--disable-dev-shm-usage");
 
-        // Runs the browser in headless mode
-        options.addArguments("--headless");
+////         Runs the browser in headless mode
+//        options.addArguments("--headless");
         // Other useful options for stability
         options.addArguments("--no-sandbox");
         options.addArguments("--disable-gpu");
