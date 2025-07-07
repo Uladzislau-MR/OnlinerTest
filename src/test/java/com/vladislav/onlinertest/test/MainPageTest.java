@@ -44,16 +44,11 @@ public class MainPageTest {
         CartPage cartPage = new CartPage(driver);
         cartPage.removeFirstProduct();
 
-
-
         Assertions.assertEquals(
                 expectedProductName,
                 actualProductName,
                 "Название найденного товара не совпадает с искомым."
         );
-
-
-
 
 
 

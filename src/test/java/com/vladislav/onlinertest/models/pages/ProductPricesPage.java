@@ -33,7 +33,7 @@ public class ProductPricesPage {
 
     public void addProductToCart() {
         sortByPriceAscending();
-        cart.waitClickableClick();
+        cart.waitClickableJS();
 
     }
 
