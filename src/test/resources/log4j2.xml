@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="INFO">
+    <Appenders>
+        <Console name="STDOUT" target="SYSTEM_OUT">
+            <PatternLayout>
+                <Pattern>%highlight{%d{yyyy-MM-dd HH:mm:ss.SSS} %-5p %style{%t}{cyan} %style{%C{1}}{blue} - %m%n}{FATAL=red blink, ERROR=red bold, WARN=yellow bold, INFO=green, DEBUG=blue, TRACE=black}</Pattern>
+
+<!--                <Pattern>%highlight{%d{yyyy-MM-dd HH:mm:ss.SSS} %-5p %style{%t}{cyan} %style{%c}{blue} - %m%n}{FATAL=red blink, ERROR=red bold, WARN=yellow bold, INFO=green, DEBUG=blue, TRACE=black}</Pattern>-->
+            </PatternLayout>
+        </Console>
+        <Console name="IGNORED_LOGS" target="SYSTEM_OUT">
+            <PatternLayout>
+                <Pattern>%highlight{%d{yyyy-MM-dd HH:mm:ss.SSS} %-5p %style{%m}{cyan}}</Pattern>
+            </PatternLayout>
+        </Console>
+    </Appenders>
+    <Loggers>
+        <Root level="INFO">
+            <AppenderRef ref="STDOUT"/>
+        </Root>
+    </Loggers>
+</Configuration>

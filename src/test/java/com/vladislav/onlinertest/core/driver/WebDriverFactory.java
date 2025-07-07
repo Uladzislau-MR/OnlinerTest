@@ -1,0 +1,116 @@
+package com.vladislav.onlinertest.core.driver;
+
+import io.github.bonigarcia.wdm.WebDriverManager;
+import lombok.extern.log4j.Log4j2;
+import lombok.extern.slf4j.Slf4j;
+import org.apache.commons.io.FileUtils;
+import org.openqa.selenium.MutableCapabilities;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.firefox.FirefoxOptions;
+import org.openqa.selenium.firefox.FirefoxProfile;
+import org.openqa.selenium.remote.RemoteWebDriver;
+
+import java.net.MalformedURLException;
+import java.net.URL;
+import java.time.Duration;
+import java.util.Collections;
+
+
+@Log4j2
+public class WebDriverFactory {
+
+    private static final String HOST = System.getProperty("host");
+    private static final String DOWNLOADS_PATH = FileUtils.getTempDirectoryPath();
+
+    public static WebDriver getDriver() {
+        WebDriver driver;
+
+        String browser = System.getProperty("browser");
+        if (browser == null) {
+            log.warn("Browser property is not set. Defaulting to 'chrome'.");
+            browser = "chrome";
+        }
+
+        switch (browser.toLowerCase()) {
+            case "chrome": {
+                ChromeOptions options = getChromeOptions();
+                if (HOST != null) {
+                    driver = createRemoteDriver(options);
+                } else {
+                    WebDriverManager.chromedriver().setup();
+                    driver = new ChromeDriver(options);
+                }
+                break;
+            }
+            case "firefox": {
+                FirefoxOptions options = getFirefoxOptions();
+                if (HOST != null) {
+                    driver = createRemoteDriver(options);
+                } else {
+                    WebDriverManager.firefoxdriver().setup();
+                    driver = new FirefoxDriver(options);
+                }
+                break;
+            }
+            default:
+                throw new RuntimeException("Unsupported browser: " + browser);
+        }
+
+        driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(30));
+        driver.manage().window().maximize();
+
+        log.info("Created WebDriver instance " + driver.getClass().getSimpleName());
+        return driver;
+    }
+
+    private static WebDriver createRemoteDriver(MutableCapabilities options) {
+        try {
+            log.info("Creating RemoteWebDriver instance on host: " + HOST);
+            return new RemoteWebDriver(new URL(HOST), options);
+        } catch (MalformedURLException e) {
+            throw new RuntimeException("invalid selenium Grid URL", e);
+        }
+    }
+
+
+    private static FirefoxOptions getFirefoxOptions() {
+        FirefoxOptions firefoxOptions = new FirefoxOptions();
+        FirefoxProfile profile = new FirefoxProfile();
+
+        // Settings for managing file downloads
+        profile.setPreference("browser.download.folderList", 2); // 2 means download to the specified directory
+        profile.setPreference("browser.download.dir", DOWNLOADS_PATH);
+        profile.setPreference("browser.helperApps.neverAsk.saveToDisk", "application/octet-stream");  // File types for automatic download
+
+        // Settings to mask automation detection
+        profile.setPreference("dom.webdriver.enabled", false);
+        profile.setPreference("devtools.chrome.enabled", false);
+        profile.setPreference("useAutomationExtension", false);
+
+        firefoxOptions.setProfile(profile);
+        return firefoxOptions;
+    }
+
+    private static ChromeOptions getChromeOptions() {
+        ChromeOptions options = new ChromeOptions();
+
+        // Disables the "Chrome is being controlled by automated test software" infobar
+        options.setExperimentalOption("excludeSwitches", Collections.singletonList("enable-automation"));
+
+        // Disables the use of /dev/shm, which solves issues with Chrome crashing in Docker containers
+        options.addArguments("--disable-dev-shm-usage");
+
+        // Runs the browser in headless mode
+        options.addArguments("--headless");
+
+        // Other useful options for stability
+        options.addArguments("--no-sandbox");
+        options.addArguments("--disable-gpu");
+        options.addArguments("--window-size=1920,1080");
+
+        return options;
+    }
+}
