@@ -2,7 +2,6 @@ package com.vladislav.onlinertest.core.driver;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 import lombok.extern.log4j.Log4j2;
-import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.MutableCapabilities;
 import org.openqa.selenium.WebDriver;
@@ -104,8 +103,7 @@ public class WebDriverFactory {
         options.addArguments("--disable-dev-shm-usage");
 
         // Runs the browser in headless mode
-        options.addArguments("--headless");
-
+//        options.addArguments("--headless");
         // Other useful options for stability
         options.addArguments("--no-sandbox");
         options.addArguments("--disable-gpu");

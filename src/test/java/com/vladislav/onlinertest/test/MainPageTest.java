@@ -5,6 +5,7 @@ import com.vladislav.onlinertest.core.driver.WebDriverSingleton;
 import com.vladislav.onlinertest.models.pages.CartPage;
 import com.vladislav.onlinertest.models.pages.ProductPricesPage;
 import com.vladislav.onlinertest.models.pages.SearchResultsPage;
+import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -28,15 +29,7 @@ public class MainPageTest {
 
 
 
-    @Test
-    public void firstTest() {
-        mainPage.open();
-        String searchText = "Телефон Samsung Galaxy S25 SM-S931B 12GB/128GB (голубой)";
-        mainPage
-                .inputText(searchText);
 
-
-    }
 
     @Test
     public void secondTest() {
@@ -67,8 +60,8 @@ public class MainPageTest {
 
     }
 
-//    @AfterEach
-//    public void tearDown() {
-//    WebDriverSingleton.closeDriver();
-//    }
+    @AfterEach
+    public void tearDown() {
+    WebDriverSingleton.closeDriver();
+    }
 }

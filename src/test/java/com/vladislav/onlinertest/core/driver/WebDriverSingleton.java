@@ -1,7 +1,6 @@
 package com.vladislav.onlinertest.core.driver;
 
 import lombok.extern.log4j.Log4j2;
-import lombok.extern.slf4j.Slf4j;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.events.EventFiringDecorator;
 import org.openqa.selenium.support.events.WebDriverListener;
@@ -17,7 +16,7 @@ public class WebDriverSingleton {
         if (driverThreadLocal.get() == null) {
         log.info("Creating a new Webdriver instance gor thread: " + Thread.currentThread().getId());
         WebDriver baseDriver = WebDriverFactory.getDriver();
-            WebDriverListener listener = new CustomWebDriverListener(); // Убедитесь, что этот класс существует
+            WebDriverListener listener = new CustomWebDriverListener();
             WebDriver decoratedDriver = new EventFiringDecorator(listener).decorate(baseDriver);
         driverThreadLocal.set(decoratedDriver);
         }

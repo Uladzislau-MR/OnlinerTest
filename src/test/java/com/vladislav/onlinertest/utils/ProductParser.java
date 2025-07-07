@@ -3,7 +3,6 @@ package com.vladislav.onlinertest.utils;
 import com.vladislav.onlinertest.core.element.Element;
 import com.vladislav.onlinertest.models.Product;
 import lombok.extern.log4j.Log4j2;
-import lombok.extern.slf4j.Slf4j;
 import org.openqa.selenium.WebElement;
 
 import java.math.BigDecimal;

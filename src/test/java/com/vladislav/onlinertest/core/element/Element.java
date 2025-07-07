@@ -1,6 +1,6 @@
 package com.vladislav.onlinertest.core.element;
 
-import com.vladislav.onlinertest.core.driver.WebDriverFactory;
+
 import com.vladislav.onlinertest.core.driver.WebDriverSingleton;
 import org.openqa.selenium.*;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -115,9 +115,5 @@ public class Element {
     }
 
 
-
-    public WebDriver getDriver() {
-        return driver;
-    }
 }
 

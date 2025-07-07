@@ -7,7 +7,7 @@ import org.openqa.selenium.WebElement;
 
 public class MainPage {
     private final WebDriver driver;
-    private final Element searchInput = Element.byXpath("//*[@id=\"fast-search\"]/div/input");;
+    private final Element searchInput = Element.byXpath("//*[@id=\"fast-search\"]/div/input");
     private final Element searchResultsFrame = Element.byXpath("//*[@id=\"fast-search-modal\"]/div/div/iframe");
 
     public MainPage(WebDriver driver) {
