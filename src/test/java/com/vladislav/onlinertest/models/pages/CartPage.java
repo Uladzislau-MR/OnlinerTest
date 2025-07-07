@@ -1,6 +1,7 @@
 package com.vladislav.onlinertest.models.pages;
 
 import com.vladislav.onlinertest.core.element.Element;
+import io.qameta.allure.Step;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
@@ -13,7 +14,7 @@ public class CartPage {
         this.driver = driver;
     }
 
-
+@Step("Remove product")
     public void removeFirstProduct() {
 
         WebElement productElement = product.getElement();

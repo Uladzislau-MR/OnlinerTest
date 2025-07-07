@@ -1,6 +1,7 @@
 package com.vladislav.onlinertest.models.pages;
 
 import com.vladislav.onlinertest.core.element.Element;
+import io.qameta.allure.Step;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
@@ -25,18 +26,18 @@ public class ProductPricesPage {
         select.selectByValue(value);
         sortByDropdown.dropDownMenuClick(dropdown);
     }
-
+    @Step("Sort products by price ascending")
     public void sortByPriceAscending() {
 
         selectSortByValue("price:asc");
     }
-
+    @Step("Add product to cart")
     public void addProductToCart() {
         sortByPriceAscending();
         cart.waitClickableJS();
 
     }
-
+    @Step("Open cart page")
     public  void openCart() {
         toCart.waitClickableClick();
     }
