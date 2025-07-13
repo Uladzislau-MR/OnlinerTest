@@ -6,6 +6,14 @@ pipeline {
     }
 
     stages {
+        stage('Check network') {
+            steps {
+                sh 'ping -c 3 github.com || true'
+                sh 'nslookup github.com || true'
+                sh 'curl -I https://github.com || true'
+            }
+        }
+
         stage('Checkout') {
             steps {
                 git 'https://github.com/Uladzislau-MR/OnlinerTest.git'
