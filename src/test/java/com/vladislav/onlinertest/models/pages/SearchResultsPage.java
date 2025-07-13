@@ -1,16 +1,9 @@
 package com.vladislav.onlinertest.models.pages;
 
 import com.vladislav.onlinertest.core.element.Element;
-import com.vladislav.onlinertest.models.Product;
-import com.vladislav.onlinertest.utils.ProductParser;
-import io.qameta.allure.Step;
-import org.openqa.selenium.By;
-import org.openqa.selenium.NoSuchElementException;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
 
-import java.util.Comparator;
-import java.util.List;
+import io.qameta.allure.Step;
+import org.openqa.selenium.WebElement;
 
 public class SearchResultsPage {
 
@@ -25,7 +18,7 @@ public class SearchResultsPage {
     }
 
     @Step("Open product prices page ")
-    public ProductPricesPage openProductPricesPage(String name, WebDriver driver) {
+    public ProductPricesPage openProductPricesPage(String name) {
         WebElement element = productLocator.getProductCardByName(name);
         priceButtonLocator.clickNested(element);
         return new ProductPricesPage();

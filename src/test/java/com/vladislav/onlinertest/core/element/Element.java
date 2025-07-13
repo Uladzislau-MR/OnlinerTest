@@ -38,9 +38,8 @@ public class Element {
 
     }
 
-    public void waitVisibilityClick() {
+    public void waitVisibility() {
         WebElement element = wait.until(ExpectedConditions.visibilityOfElementLocated(by));
-        element.click();
     }
 
 
@@ -161,7 +160,6 @@ public class Element {
                     return card;
                 }
             } catch (NoSuchElementException e) {
-
             }
         }
         throw new NoSuchElementException("Product with name '" + productName + "' not found in search results.");

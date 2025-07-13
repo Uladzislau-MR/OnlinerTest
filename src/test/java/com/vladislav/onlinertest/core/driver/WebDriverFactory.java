@@ -77,7 +77,6 @@ public class WebDriverFactory {
 
     private static FirefoxOptions getFirefoxOptions() {
         FirefoxOptions firefoxOptions = new FirefoxOptions();
-        firefoxOptions.setBinary("C:\\Program Files\\FirefoxPortable\\FirefoxPortable.exe");
         FirefoxProfile profile = new FirefoxProfile();
 
         // Settings for managing file downloads
