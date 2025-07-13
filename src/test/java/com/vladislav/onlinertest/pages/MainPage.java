@@ -1,4 +1,4 @@
-package com.vladislav.onlinertest.pages;
+package com.vladislav.onlinertest.models.pages;
 
 import com.vladislav.onlinertest.core.element.Element;
 import io.qameta.allure.Step;
