@@ -1,4 +1,4 @@
-package com.vladislav.onlinertest.models.pages;
+package com.vladislav.onlinertest.pages;
 
 import com.vladislav.onlinertest.core.element.Element;
 

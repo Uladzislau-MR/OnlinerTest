@@ -2,15 +2,15 @@ package com.vladislav.onlinertest.test;
 
 
 import com.vladislav.onlinertest.core.driver.WebDriverSingleton;
-import com.vladislav.onlinertest.models.pages.CartPage;
-import com.vladislav.onlinertest.models.pages.ProductPricesPage;
-import com.vladislav.onlinertest.models.pages.SearchResultsPage;
+import com.vladislav.onlinertest.pages.CartPage;
+import com.vladislav.onlinertest.pages.ProductPricesPage;
+import com.vladislav.onlinertest.pages.SearchResultsPage;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.WebDriver;
 
-import com.vladislav.onlinertest.models.pages.MainPage;
+import com.vladislav.onlinertest.pages.MainPage;
 public class MainPageTest {
 
     private WebDriver driver;
@@ -23,7 +23,6 @@ public class MainPageTest {
         this.mainPage = new MainPage();
         this.productPricesPage = new ProductPricesPage();
         this.cartPage = new CartPage();
-
         driver.get("https://www.onliner.by");
 
         }
