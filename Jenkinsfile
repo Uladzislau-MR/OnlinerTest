@@ -22,12 +22,14 @@ pipeline {
 
         stage('Install Dependencies') {
             steps {
+                sh 'chmod +x ./gradlew'
                 sh './gradlew build -x test'
             }
         }
 
         stage('Run Tests') {
             steps {
+                sh 'chmod +x ./gradlew'
                 script {
                     def browser = params.BROWSER
                     echo "Running tests on ${browser} browser..."
@@ -48,6 +50,7 @@ pipeline {
 
         stage('Generate Allure Report') {
             steps {
+                sh 'chmod +x ./gradlew'
                 sh './gradlew allureReport'
             }
             post {
