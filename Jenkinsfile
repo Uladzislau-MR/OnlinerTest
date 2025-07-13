@@ -14,7 +14,7 @@ pipeline {
 
         stage('Install Dependencies') {
             steps {
-                bat 'gradlew build -x test'
+                sh './gradlew build -x test'
             }
         }
 
@@ -24,9 +24,7 @@ pipeline {
                     def browser = params.BROWSER
                     echo "Running tests on ${browser} browser..."
 
-                    def exitCode = bat(returnStatus: true, script: """
-                        gradlew clean test -Dbrowser=${browser}
-                    """)
+                    def exitCode = sh(returnStatus: true, script: "./gradlew clean test -Dbrowser=${browser}")
 
                     if (exitCode != 0) {
                         echo "Tests failed, but proceeding to generate Allure reports."
@@ -42,7 +40,7 @@ pipeline {
 
         stage('Generate Allure Report') {
             steps {
-                bat 'gradlew allureReport'
+                sh './gradlew allureReport'
             }
             post {
                 always {
