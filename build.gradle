@@ -25,6 +25,13 @@ java {
     }
 }
 
+javaToolchains {
+    repositories {
+        mavenCentral()
+        gradlePluginPortal()
+    }
+}
+
 tasks.withType(JavaCompile).configureEach {
     options.encoding = 'UTF-8'
 }
@@ -48,16 +55,14 @@ dependencies {
     testRuntimeOnly "org.junit.jupiter:junit-jupiter-engine:$junitVersion"
 
     // Lombok
-    compileOnly 'org.projectlombok:lombok:1.18.36'
-    annotationProcessor 'org.projectlombok:lombok:1.18.36'
-    testCompileOnly 'org.projectlombok:lombok:1.18.36'
-    testAnnotationProcessor 'org.projectlombok:lombok:1.18.36'
+    compileOnly "org.projectlombok:lombok:$lombokVersion"
+    annotationProcessor "org.projectlombok:lombok:$lombokVersion"
+    testCompileOnly "org.projectlombok:lombok:$lombokVersion"
+    testAnnotationProcessor "org.projectlombok:lombok:$lombokVersion"
 
     // Allure
     testImplementation "io.qameta.allure:allure-junit5:$allureVersion"
 
-//    // Logging
-//    implementation "ch.qos.logback:logback-classic:$logbackVersion"
     // Log4j2
     implementation 'org.apache.logging.log4j:log4j-api:2.20.0'
     implementation 'org.apache.logging.log4j:log4j-core:2.20.0'
@@ -83,7 +88,9 @@ allure {
         }
     }
 }
+
 allureReport {
     clean = true
 }
+
 test.finalizedBy 'allureReport'
