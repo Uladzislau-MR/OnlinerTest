@@ -103,7 +103,7 @@ public class WebDriverFactory {
         options.addArguments("--disable-dev-shm-usage");
 
 ////         Runs the browser in headless mode
-//        options.addArguments("--headless");
+        options.addArguments("--headless");
         // Other useful options for stability
         options.addArguments("--no-sandbox");
         options.addArguments("--disable-gpu");

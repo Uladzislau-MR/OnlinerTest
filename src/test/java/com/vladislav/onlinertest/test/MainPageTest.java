@@ -6,6 +6,7 @@ import com.vladislav.onlinertest.pages.MainPage;
 import com.vladislav.onlinertest.pages.CartPage;
 import com.vladislav.onlinertest.pages.ProductPricesPage;
 import com.vladislav.onlinertest.pages.SearchResultsPage;
+import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -48,8 +49,8 @@ public class MainPageTest {
         );
     }
 
-//    @AfterEach
-//    public void tearDown() {
-//    WebDriverSingleton.closeDriver();
-//    }
+    @AfterEach
+    public void tearDown() {
+    WebDriverSingleton.closeDriver();
+    }
 }
