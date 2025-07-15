@@ -49,6 +49,43 @@ public class MainPageTest {
         );
     }
 
+        @Test
+        public void firstTest() {
+
+            String expectedProductName = "Телефон Samsung Galaxy S25 SM-S931B 12GB/128GB (голубой)";
+            SearchResultsPage resultsPage = mainPage.inputText(expectedProductName);
+            String actualProductName = resultsPage.getActualProductName();
+            System.out.println(actualProductName);
+            resultsPage.openProductPricesPage(expectedProductName);
+
+            productPricesPage.addProductToCart();
+            productPricesPage.openCart();
+            cartPage.removeFirstProduct();
+
+            Assertions.assertEquals(
+                    expectedProductName,
+                    actualProductName,
+                    "Название найденного товара не совпадает с искомым."
+            );
+    }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+
     @AfterEach
     public void tearDown() {
     WebDriverSingleton.closeDriver();
