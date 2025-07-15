@@ -13,8 +13,7 @@ public class MainPage {
     @Step("Enter search text: '{text}' and switch to results frame")
     public SearchResultsPage inputText(String text) {
         searchInput.enterText(text);
-        WebElement frameElement = searchResultsFrame.getElement();
-        searchResultsFrame.switchFrame(frameElement);
+        searchResultsFrame.switchFrame();
         return new SearchResultsPage();
     }
 }

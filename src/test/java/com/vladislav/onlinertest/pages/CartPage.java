@@ -8,8 +8,6 @@ public class CartPage {
     Element product = Element.byXpath(".//a[contains(@class, 'cart-form__button_remove')]");
     Element closeButton = Element.byXpath("//a[contains(@class,' cart-form__link_small') and contains(text(), 'Закрыть')]");
 
-
-
 @Step("Remove product")
     public void removeFirstProduct() {
     product.clickElementByAction();

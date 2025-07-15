@@ -96,8 +96,9 @@ public class Element {
         return getNestedElement(nested).getText();
     }
 
-    public void switchFrame(WebElement frameElement) {
-        wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt(frameElement));
+    public void switchFrame() {
+       WebElement frameElement = getElement();
+       wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt(frameElement));
     }
 
     public void dropDownMenuClick(WebElement element) {

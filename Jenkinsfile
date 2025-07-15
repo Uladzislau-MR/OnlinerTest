@@ -3,6 +3,7 @@ pipeline {
 
     parameters {
         string(name: 'BROWSER', defaultValue: 'chrome', description: 'Browser to run tests on')
+        string(name: 'SUITE_NAME', defaultValue: '', description: 'Suite class to run (e.g., CartTestsSuite)')
     }
 
     stages {
@@ -32,9 +33,15 @@ pipeline {
                 sh 'chmod +x ./gradlew'
                 script {
                     def browser = params.BROWSER
-                    echo "Running tests on ${browser} browser..."
+                    def suite = params.SUITE_NAME
 
-                    def exitCode = sh(returnStatus: true, script: "./gradlew clean test -Dbrowser=${browser}")
+                    echo "Running tests on ${browser} with suite: ${suite}"
+
+                    def command = suite ?
+                        "./gradlew clean test -Dbrowser=${browser} --tests \"com.vladislav.onlinertest.suites.${suite}\"" :
+                        "./gradlew clean test -Dbrowser=${browser}"
+
+                    def exitCode = sh(returnStatus: true, script: command)
 
                     if (exitCode != 0) {
                         echo "Tests failed, but proceeding to generate Allure reports."
@@ -50,7 +57,6 @@ pipeline {
 
         stage('Generate Allure Report') {
             steps {
-                sh 'chmod +x ./gradlew'
                 sh './gradlew allureReport'
             }
             post {
