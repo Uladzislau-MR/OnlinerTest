@@ -39,7 +39,7 @@ public class WebDriverSingleton {
             WebDriverListener listener = new CustomWebDriverListener();
             WebDriver decoratedDriver = new EventFiringDecorator(listener).decorate(baseDriver);
 
-            // 3. Добавляем созданный драйвер в наш общий список
+
             drivers.add(decoratedDriver);
 
             driverThreadLocal.set(decoratedDriver);

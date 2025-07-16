@@ -11,7 +11,6 @@ import org.junit.jupiter.api.*;
 import org.openqa.selenium.WebDriver;
 import org.junit.jupiter.api.extension.ExtendWith;
 @ExtendWith(ScreenshotOnFailureExtension.class)
-//@Tag("sanity")
 public class MainPageTest {
 
 

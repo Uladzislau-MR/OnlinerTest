@@ -17,6 +17,7 @@ import java.net.URL;
 import java.time.Duration;
 import java.util.Collections;
 
+
 @Log4j2
 public class WebDriverFactory {
 
@@ -25,6 +26,7 @@ public class WebDriverFactory {
 
     public static WebDriver getDriver() {
         WebDriver driver;
+
         String browser = System.getProperty("browser");
         if (browser == null) {
             log.warn("Browser property is not set. Defaulting to 'chrome'.");
@@ -37,6 +39,7 @@ public class WebDriverFactory {
                 if (HOST != null) {
                     driver = createRemoteDriver(options);
                 } else {
+                    WebDriverManager.chromedriver().setup();
                     driver = new ChromeDriver(options);
                 }
                 break;
@@ -46,6 +49,7 @@ public class WebDriverFactory {
                 if (HOST != null) {
                     driver = createRemoteDriver(options);
                 } else {
+                    WebDriverManager.firefoxdriver().setup();
                     driver = new FirefoxDriver(options);
                 }
                 break;
@@ -56,6 +60,7 @@ public class WebDriverFactory {
 
         driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(30));
         driver.manage().window().maximize();
+
         log.info("Created WebDriver instance " + driver.getClass().getSimpleName());
         return driver;
     }
@@ -69,28 +74,41 @@ public class WebDriverFactory {
         }
     }
 
+
     private static FirefoxOptions getFirefoxOptions() {
         FirefoxOptions firefoxOptions = new FirefoxOptions();
         FirefoxProfile profile = new FirefoxProfile();
-        profile.setPreference("browser.download.folderList", 2);
+
+        // Settings for managing file downloads
+        profile.setPreference("browser.download.folderList", 2); // 2 means download to the specified directory
         profile.setPreference("browser.download.dir", DOWNLOADS_PATH);
-        profile.setPreference("browser.helperApps.neverAsk.saveToDisk", "application/octet-stream");
+        profile.setPreference("browser.helperApps.neverAsk.saveToDisk", "application/octet-stream");  // File types for automatic download
+
+        // Settings to mask automation detection
         profile.setPreference("dom.webdriver.enabled", false);
         profile.setPreference("devtools.chrome.enabled", false);
         profile.setPreference("useAutomationExtension", false);
+
         firefoxOptions.setProfile(profile);
         return firefoxOptions;
     }
 
     private static ChromeOptions getChromeOptions() {
         ChromeOptions options = new ChromeOptions();
+        options.addArguments("--user-data-dir=" + FileUtils.getTempDirectoryPath() + "chrome-profile-" + System.currentTimeMillis());
+        // Disables the "Chrome is being controlled by automated test software" infobar
         options.setExperimentalOption("excludeSwitches", Collections.singletonList("enable-automation"));
+
+        // Disables the use of /dev/shm, which solves issues with Chrome crashing in Docker containers
         options.addArguments("--disable-dev-shm-usage");
+
+////         Runs the browser in headless mode
         options.addArguments("--headless");
+        // Other useful options for stability
         options.addArguments("--no-sandbox");
         options.addArguments("--disable-gpu");
         options.addArguments("--window-size=1920,1080");
-        options.addArguments("--user-data-dir=" + FileUtils.getTempDirectoryPath() + "chrome-profile-" + System.currentTimeMillis());
+
         return options;
     }
 }
