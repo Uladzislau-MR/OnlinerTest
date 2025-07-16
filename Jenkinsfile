@@ -2,7 +2,7 @@ pipeline {
     agent any
 
     parameters {
-        choice(name: 'TEST_TASK', choices: ['test', 'sanityTest'], description: 'Какую задачу запустить (test=все, sanityTest=Sanity сьют)')
+        choice(name: 'TEST_TASK', choices: ['test', 'sanityTest', 'negativeTest'], description: 'Какую задачу запустить (test=все, sanityTest=Sanity, negativeTest=Negative)')
         choice(name: 'BROWSER', choices: ['chrome', 'firefox'], description: 'В каком браузере запустить тесты')
     }
 
