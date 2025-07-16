@@ -28,6 +28,13 @@ pipeline {
             }
         }
 
+        stage('Debug Environment') {
+            steps {
+                echo "--- Checking Environment ---"
+                sh 'google-chrome --version || echo "!!! Google Chrome is NOT INSTALLED !!!"'
+            }
+        }
+
         stage('Run Tests') {
             steps {
                 sh 'chmod +x ./gradlew'
