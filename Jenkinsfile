@@ -2,8 +2,8 @@ pipeline {
     agent any
 
     parameters {
-        string(name: 'BROWSER', defaultValue: 'chrome', description: 'Browser to run tests on')
-        string(name: 'SUITE_NAME', defaultValue: '', description: 'Suite class to run (e.g., CartTestsSuite)')
+        choice(name: 'TEST_TASK', choices: ['test', 'sanityTest'], description: 'Какую задачу запустить (test=все, sanityTest=Sanity сьют)')
+        choice(name: 'BROWSER', choices: ['chrome', 'firefox'], description: 'В каком браузере запустить тесты')
     }
 
     stages {
@@ -32,25 +32,17 @@ pipeline {
             steps {
                 sh 'chmod +x ./gradlew'
                 script {
-                    def browser = params.BROWSER
-                    def suite = params.SUITE_NAME
+                    try {
+                        def browser = params.BROWSER
+                        def task = params.TEST_TASK
 
-                    echo "Running tests on ${browser} with suite: ${suite}"
+                        echo "Running Gradle task '${task}' on browser '${browser}'"
+                        sh "./gradlew ${task} -Dbrowser=${browser}"
 
-                    def command = suite ?
-                        "./gradlew clean test -Dbrowser=${browser} --tests \"com.vladislav.onlinertest.suites.${suite}\"" :
-                        "./gradlew clean test -Dbrowser=${browser}"
-
-                    def exitCode = sh(returnStatus: true, script: command)
-
-                    if (exitCode != 0) {
-                        echo "Tests failed, but proceeding to generate Allure reports."
+                    } catch (Exception e) {
+                        echo "Tests failed! Marking build as FAILURE."
+                        currentBuild.result = 'FAILURE'
                     }
-                }
-            }
-            post {
-                always {
-                    echo "Test execution completed (success or failure). Proceeding to Allure report generation."
                 }
             }
         }
@@ -58,11 +50,6 @@ pipeline {
         stage('Generate Allure Report') {
             steps {
                 sh './gradlew allureReport'
-            }
-            post {
-                always {
-                    echo "Allure Report generation completed."
-                }
             }
         }
 
@@ -73,11 +60,6 @@ pipeline {
                     jdk: '',
                     results: [[path: "build/allure-results"]]
                 ])
-            }
-            post {
-                always {
-                    echo "Allure results archived successfully."
-                }
             }
         }
     }

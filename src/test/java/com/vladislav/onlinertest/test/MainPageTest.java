@@ -7,14 +7,11 @@ import com.vladislav.onlinertest.pages.CartPage;
 import com.vladislav.onlinertest.pages.ProductPricesPage;
 import com.vladislav.onlinertest.pages.SearchResultsPage;
 import com.vladislav.onlinertest.utils.ScreenshotOnFailureExtension;
-import org.junit.jupiter.api.AfterEach;
-import org.junit.jupiter.api.Assertions;
-import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.*;
 import org.openqa.selenium.WebDriver;
 import org.junit.jupiter.api.extension.ExtendWith;
 @ExtendWith(ScreenshotOnFailureExtension.class)
-
+//@Tag("sanity")
 public class MainPageTest {
 
 

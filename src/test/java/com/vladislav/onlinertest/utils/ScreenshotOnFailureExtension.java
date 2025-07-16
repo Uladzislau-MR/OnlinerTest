@@ -10,12 +10,12 @@ import org.openqa.selenium.WebDriver;
 
 import java.nio.charset.StandardCharsets;
 
-// Меняем TestWatcher на TestExecutionExceptionHandler
+
 public class ScreenshotOnFailureExtension implements TestExecutionExceptionHandler {
 
     @Override
     public void handleTestExecutionException(ExtensionContext context, Throwable throwable) throws Throwable {
-        // Эта логика теперь выполняется СРАЗУ ПОСЛЕ падения теста и ДО @AfterEach
+
         WebDriver driver = WebDriverSingleton.getDriver();
 
         if (driver instanceof TakesScreenshot) {
@@ -37,8 +37,7 @@ public class ScreenshotOnFailureExtension implements TestExecutionExceptionHandl
             );
         }
 
-        // Важно! Мы должны "пробросить" исключение дальше,
-        // чтобы тест все равно был помечен как упавший.
+
         throw throwable;
     }
 }
