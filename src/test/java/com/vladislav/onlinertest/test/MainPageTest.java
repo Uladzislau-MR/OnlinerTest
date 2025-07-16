@@ -13,7 +13,6 @@ import org.junit.jupiter.api.extension.ExtendWith;
 @ExtendWith(ScreenshotOnFailureExtension.class)
 public class MainPageTest {
 
-
     private WebDriver driver;
     private MainPage mainPage;
     private SearchResultsPage searchResultsPage;

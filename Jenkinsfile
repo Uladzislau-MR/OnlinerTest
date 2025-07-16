@@ -2,7 +2,7 @@ pipeline {
     agent any
 
     parameters {
-        choice(name: 'TEST_TASK', choices: ['test', 'sanityTest', 'negativeTest'], description: 'Какую задачу запустить (test=все, sanityTest=Sanity, negativeTest=Negative)')
+        choice(name: 'TEST_TASK', choices: ['test', 'sanityTest', 'negativeTest', 'smokeTest'], description: 'Какую задачу запустить')
         choice(name: 'BROWSER', choices: ['chrome', 'firefox'], description: 'В каком браузере запустить тесты')
     }
 
@@ -43,8 +43,10 @@ pipeline {
                         def browser = params.BROWSER
                         def task = params.TEST_TASK
 
+                        echo "Jenkins parameter 'TEST_TASK' is set to: '${task}'"
                         echo "Running Gradle task '${task}' on browser '${browser}'"
-                        sh "./gradlew ${task} -Dbrowser=${browser}"
+
+                        sh "./gradlew clean ${task} -Dbrowser=${browser}"
 
                     } catch (Exception e) {
                         echo "Tests failed! Marking build as FAILURE."
