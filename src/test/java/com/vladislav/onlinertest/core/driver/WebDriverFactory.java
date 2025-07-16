@@ -95,19 +95,24 @@ public class WebDriverFactory {
 
     private static ChromeOptions getChromeOptions() {
         ChromeOptions options = new ChromeOptions();
-        options.addArguments("--user-data-dir=" + FileUtils.getTempDirectoryPath() + "chrome-profile-" + System.currentTimeMillis());
-        // Disables the "Chrome is being controlled by automated test software" infobar
+
         options.setExperimentalOption("excludeSwitches", Collections.singletonList("enable-automation"));
 
-        // Disables the use of /dev/shm, which solves issues with Chrome crashing in Docker containers
+        options.addArguments("--no-sandbox");
         options.addArguments("--disable-dev-shm-usage");
 
-////         Runs the browser in headless mode
         options.addArguments("--headless");
-        // Other useful options for stability
-        options.addArguments("--no-sandbox");
         options.addArguments("--disable-gpu");
+        options.addArguments("--disable-software-rasterizer");
+        options.addArguments("--disable-features=VizDisplayCompositor");
+
+        options.addArguments("--disable-extensions");
+        options.addArguments("--disable-browser-side-navigation");
+        options.addArguments("--dns-prefetch-disable");
+
         options.addArguments("--window-size=1920,1080");
+
+        options.addArguments("--user-data-dir=" + FileUtils.getTempDirectoryPath() + "chrome-profile-" + System.currentTimeMillis());
 
         return options;
     }
