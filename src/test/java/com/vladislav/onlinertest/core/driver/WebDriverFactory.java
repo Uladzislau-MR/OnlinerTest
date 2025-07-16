@@ -104,7 +104,7 @@ public class WebDriverFactory {
         options.addArguments("--disable-browser-side-navigation");
         options.addArguments("--dns-prefetch-disable");
         options.addArguments("--window-size=1920,1080");
-        options.addArguments("--user-data-dir=" + FileUtils.getTempDirectoryPath() + "chrome-profile-" + System.currentTimeMillis());
+        options.addArguments("--user-data-dir=" + FileUtils.getTempDirectoryPath() + File.separator + "chrome-profile-" + System.currentTimeMillis());
         return options;
     }
 }

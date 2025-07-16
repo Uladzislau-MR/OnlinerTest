@@ -97,3 +97,23 @@ task sanityTest(type: Test) {
     }
     systemProperties System.getProperties()
 }
+
+task negativeTest(type: Test) {
+    doFirst {
+        println "--- ЗАПУЩЕНА ЗАДАЧА 'negativeTest' (ТОЛЬКО СЬЮТ) ---"
+    }
+    useJUnitPlatform {
+        include '**/NegativeTestSuite.class'
+    }
+    systemProperties System.getProperties()
+}
+
+task smokeTest(type: Test) {
+    doFirst {
+        println "--- ЗАПУЩЕНА ЗАДАЧА 'smokeTest' (ТОЛЬКО СЬЮТ) ---"
+    }
+    useJUnitPlatform {
+        include '**/SmokeTestSuite.class'
+    }
+    systemProperties System.getProperties()
+}
