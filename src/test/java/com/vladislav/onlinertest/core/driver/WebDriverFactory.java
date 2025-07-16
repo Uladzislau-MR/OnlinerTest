@@ -95,7 +95,7 @@ public class WebDriverFactory {
 
     private static ChromeOptions getChromeOptions() {
         ChromeOptions options = new ChromeOptions();
-        options.addArguments("--user-data-dir=" + FileUtils.getTempDirectoryPath() + "chrome-profile-" + System.currentTimeMillis());
+//        options.addArguments("--user-data-dir=" + FileUtils.getTempDirectoryPath() + "chrome-profile-" + System.currentTimeMillis());
         // Disables the "Chrome is being controlled by automated test software" infobar
         options.setExperimentalOption("excludeSwitches", Collections.singletonList("enable-automation"));
 
