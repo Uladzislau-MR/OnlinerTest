@@ -138,7 +138,10 @@ public class Element {
 
     public void clickNested(WebElement parent) {
         WebElement nested = parent.findElement(by);
-        wait.until(ExpectedConditions.elementToBeClickable(nested)).click();
+
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+        js.executeScript("arguments[0].click();", nested);
+//        wait.until(ExpectedConditions.elementToBeClickable(nested)).click();
     }
 
     public void clickElementByAction() {
