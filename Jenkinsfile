@@ -49,6 +49,8 @@ pipeline {
                     } catch (Exception e) {
                         echo "Tests failed! Marking build as FAILURE."
                         currentBuild.result = 'FAILURE'
+                        echo "--- Displaying chromedriver.log ---"
+                        sh 'cat chromedriver.log || echo "chromedriver.log not found."'
                     }
                 }
             }
