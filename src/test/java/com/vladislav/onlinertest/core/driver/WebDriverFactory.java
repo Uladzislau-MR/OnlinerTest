@@ -95,7 +95,7 @@ public class WebDriverFactory {
 
     private static ChromeOptions getChromeOptions() {
         ChromeOptions options = new ChromeOptions();
-
+        options.addArguments("--user-data-dir=" + FileUtils.getTempDirectoryPath() + "chrome-profile-" + System.currentTimeMillis());
         // Disables the "Chrome is being controlled by automated test software" infobar
         options.setExperimentalOption("excludeSwitches", Collections.singletonList("enable-automation"));
 
@@ -103,7 +103,7 @@ public class WebDriverFactory {
         options.addArguments("--disable-dev-shm-usage");
 
 ////         Runs the browser in headless mode
-//        options.addArguments("--headless");
+        options.addArguments("--headless");
         // Other useful options for stability
         options.addArguments("--no-sandbox");
         options.addArguments("--disable-gpu");
