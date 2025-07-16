@@ -46,33 +46,26 @@ configurations {
 }
 
 dependencies {
-    // Selenium
     implementation "org.seleniumhq.selenium:selenium-java:$seleniumVersion"
     implementation "io.github.bonigarcia:webdrivermanager:$webDriverManagerVersion"
-
-    // JUnit
     testImplementation "org.junit.jupiter:junit-jupiter-api:$junitVersion"
     testRuntimeOnly "org.junit.jupiter:junit-jupiter-engine:$junitVersion"
     testImplementation 'org.junit.platform:junit-platform-suite:1.10.0'
-    // Lombok
     compileOnly "org.projectlombok:lombok:$lombokVersion"
     annotationProcessor "org.projectlombok:lombok:$lombokVersion"
     testCompileOnly "org.projectlombok:lombok:$lombokVersion"
     testAnnotationProcessor "org.projectlombok:lombok:$lombokVersion"
-
-    // Allure
     testImplementation "io.qameta.allure:allure-junit5:$allureVersion"
-
-    // Log4j2
     implementation 'org.apache.logging.log4j:log4j-api:2.20.0'
     implementation 'org.apache.logging.log4j:log4j-core:2.20.0'
     implementation 'org.apache.logging.log4j:log4j-slf4j2-impl:2.20.0'
-
-    // AspectJ
     runtimeOnly 'org.aspectj:aspectjweaver:1.9.22'
 }
 
 test {
+    doFirst {
+        println "--- ЗАПУЩЕНА ЗАДАЧА 'test' (ВСЕ ТЕСТЫ) ---"
+    }
     useJUnitPlatform()
     systemProperties System.getProperties()
     systemProperty "allure.results.directory", "${buildDir}/allure-results"
@@ -94,3 +87,13 @@ allureReport {
 }
 
 test.finalizedBy 'allureReport'
+
+task sanityTest(type: Test) {
+    doFirst {
+        println "--- ЗАПУЩЕНА ЗАДАЧА 'sanityTest' (ТОЛЬКО СЬЮТ) ---"
+    }
+    useJUnitPlatform {
+        include '**/SanityTestSuite.class'
+    }
+    systemProperties System.getProperties()
+}
