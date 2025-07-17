@@ -21,17 +21,19 @@ pipeline {
             }
         }
 
+        // --- ДОБАВЛЕН НОВЫЙ ЭТАП ДЛЯ ПРОВЕРКИ ---
+        stage('Verify Source Code') {
+            steps {
+                echo "--- Verifying content of WebDriverFactory.java ---"
+                // Печатаем содержимое файла, который использует Jenkins
+                sh 'cat src/test/java/com/vladislav/onlinertest/core/driver/WebDriverFactory.java'
+            }
+        }
+
         stage('Install Dependencies') {
             steps {
                 sh 'chmod +x ./gradlew'
                 sh './gradlew build -x test'
-            }
-        }
-
-        stage('Debug Environment') {
-            steps {
-                echo "--- Checking Environment ---"
-                sh 'google-chrome --version || echo "!!! Google Chrome is NOT INSTALLED !!!"'
             }
         }
 
