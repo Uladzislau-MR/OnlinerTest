@@ -2,7 +2,7 @@ pipeline {
     agent any
 
     parameters {
-        choice(name: 'TEST_TASK', choices: ['test', 'sanityTest', 'negativeTest'], description: 'Какую задачу запустить')
+        choice(name: 'TEST_SCENARIO', choices: ['test', 'sanityTest', 'negativeTest'], description: 'Какую задачу запустить')
         choice(name: 'BROWSER', choices: ['chrome', 'firefox'], description: 'В каком браузере запустить тесты')
     }
 
@@ -41,9 +41,9 @@ pipeline {
                 script {
                     try {
                         def browser = params.BROWSER
-                        def task = params.TEST_TASK
+                        def task = params.TEST_SCENARIO
 
-                        echo "Jenkins parameter 'TEST_TASK' is set to: '${task}'"
+                        echo "Jenkins parameter 'TEST_SCENARIO' is set to: '${task}'"
                         echo "Running Gradle task '${task}' on browser '${browser}'"
 
                         sh "./gradlew clean ${task} -Dbrowser=${browser}"
