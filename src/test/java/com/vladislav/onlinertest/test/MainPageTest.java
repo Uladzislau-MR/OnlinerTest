@@ -27,7 +27,6 @@ public class MainPageTest {
         mainPage = new MainPage();
         searchResultsPage = new SearchResultsPage();
         productPricesPage = new ProductPricesPage();
-        cartPage = new CartPage();
         driver.get("https://www.onliner.by");
     }
 
@@ -44,7 +43,8 @@ public class MainPageTest {
 
         searchResultsPage = mainPage.inputText(PRODUCT_NAME);
         productPricesPage = searchResultsPage.openProductPricesPage(PRODUCT_NAME);
-        productPricesPage.addProductToCart();
+        boolean isProductAddedInCart = productPricesPage.addProductToCart();
+        Assertions.assertTrue(isProductAddedInCart, "Ошибка добавления товара в корзину");
     }
 
     @Test
@@ -53,18 +53,19 @@ public class MainPageTest {
         searchResultsPage = mainPage.inputText(PRODUCT_NAME);
         productPricesPage = searchResultsPage.openProductPricesPage(PRODUCT_NAME);
         productPricesPage.addProductToCart();
-        productPricesPage.openCart();
+        cartPage = productPricesPage.openCart();
+        Assertions.assertTrue(cartPage.isProductInCart(PRODUCT_NAME), "Продукт " + PRODUCT_NAME + " отсутствует в корзине") ;
+
     }
 
     @Test
     public void removingAProductFromTheCart() {
-        String expectedName = "Телефон Samsung Galaxy S25 SM-S931B 12GB/128GB (голубой)";
-        searchResultsPage = mainPage.inputText(expectedName);
-        productPricesPage = searchResultsPage.openProductPricesPage(expectedName);
-        productPricesPage.addProductToCart();
 
-        productPricesPage.openCart();
-        cartPage.removeFirstProduct();
+        searchResultsPage = mainPage.inputText(PRODUCT_NAME);
+        productPricesPage = searchResultsPage.openProductPricesPage(PRODUCT_NAME);
+        productPricesPage.addProductToCart();
+        cartPage = productPricesPage.openCart();
+        Assertions.assertTrue(cartPage.removeFirstProduct(), "Ошибка добавления товара в корзину");
     }
 
 

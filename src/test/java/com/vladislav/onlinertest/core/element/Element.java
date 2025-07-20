@@ -61,7 +61,8 @@ public class Element {
         js.executeScript("arguments[0].dispatchEvent(new Event('input', { bubbles: true }));", inputField);
     }
 
-    public String getText(WebElement element) {
+    public String getText() {
+        WebElement element = getElement();
         wait.until(ExpectedConditions.visibilityOf(element));
         return element.getText();
     }
@@ -135,13 +136,24 @@ public class Element {
 
     }
 
+    public int getNumberFromLocator() {
+        WebElement productElement = getElement();
+        String locatorText = productElement.getAttribute("value");
+        try {
+            return Integer.parseInt(locatorText);
+        } catch (NumberFormatException e) {
+            System.err.println("Error: Element text '" + locatorText + "' is not a valid integer for conversion. Locator: " + by.toString());
+            throw e;
+        }
+         }
+
+
 
     public void clickNested(WebElement parent) {
         WebElement nested = parent.findElement(by);
 
         JavascriptExecutor js = (JavascriptExecutor) driver;
         js.executeScript("arguments[0].click();", nested);
-//        wait.until(ExpectedConditions.elementToBeClickable(nested)).click();
     }
 
     public void clickElementByAction() {
@@ -167,6 +179,15 @@ public class Element {
             }
         }
         throw new NoSuchElementException("Product with name '" + productName + "' not found in search results.");
+    }
+
+    public boolean isDisplayed() {
+        try {
+            return getElement().isDisplayed();
+        } catch (NoSuchElementException | TimeoutException e) {
+
+            return false;
+        }
     }
 
 
