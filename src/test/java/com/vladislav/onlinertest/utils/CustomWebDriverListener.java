@@ -1,9 +1,7 @@
 package com.vladislav.onlinertest.utils;
 
 import lombok.extern.log4j.Log4j2;
-import org.openqa.selenium.Alert;
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.*;
 import org.openqa.selenium.support.events.WebDriverListener;
 import io.qameta.allure.Allure;
 
@@ -48,5 +46,21 @@ public class CustomWebDriverListener implements WebDriverListener {
     public void beforeFindElement(WebDriver driver, By by) {
         log.debug("Finding element: " + by);
         Allure.step("Finding element " + by.toString());
+    }
+
+    @Override
+    public void afterFindElement(WebDriver driver, By by, WebElement result) {
+
+        String elementInfo = "";
+        try {
+                 if (result != null) {
+                elementInfo = " (Tag: " + result.getTagName() + ", Text: '" + result.getText().trim().replace("\n", " ") + "')";
+            }
+        } catch (WebDriverException e) {
+                elementInfo = " (Info not available, element might be stale)";
+        }
+
+        log.info("Listener: Found element: " + by.toString() + elementInfo);
+        Allure.step("Listener: Element found: " + by.toString() + elementInfo);
     }
 }

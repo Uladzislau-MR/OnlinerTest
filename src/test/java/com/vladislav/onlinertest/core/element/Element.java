@@ -64,6 +64,7 @@ public class Element {
     public String getText() {
         WebElement element = getElement();
         wait.until(ExpectedConditions.visibilityOf(element));
+
         return element.getText();
     }
 
@@ -187,9 +188,14 @@ public class Element {
         } catch (NoSuchElementException | TimeoutException e) {
 
             return false;
-        }
+                }
     }
 
 
+    
+
+
 }
+
+
 

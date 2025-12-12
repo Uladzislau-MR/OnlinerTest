@@ -20,6 +20,7 @@ public class ScreenshotOnFailureExtension implements TestExecutionExceptionHandl
 
         if (driver instanceof TakesScreenshot) {
             byte[] screenshot = ((TakesScreenshot) driver).getScreenshotAs(OutputType.BYTES);
+
             Allure.getLifecycle().addAttachment(
                     "Screenshot on failure",
                     "image/png",

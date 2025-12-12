@@ -1,0 +1,1 @@
+Cannot invoke "com.vladislav.onlinertest.pages.CartPage.removeFirstProduct()" because "this.cartPage" is null

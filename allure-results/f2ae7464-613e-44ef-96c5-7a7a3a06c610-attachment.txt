@@ -1,0 +1,1 @@
+Продукт Телефон Samsung Galaxy S25 SM-S931B 12GB/128GB (голубой) отсутствует в корзине ==> expected: <true> but was: <false>
