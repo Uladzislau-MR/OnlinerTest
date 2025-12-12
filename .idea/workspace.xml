@@ -1,0 +1,730 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="94b8b672-c6d4-4ffa-8a42-500e401a2c53" name="Changes" comment="Improve test logic">
+      <change afterPath="$PROJECT_DIR$/allure-results/06c59e9b-4fb4-4cbe-aa06-de60b87232f3-container.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/allure-results/09beba59-a220-48df-b4dd-4f878d7e5840-container.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/allure-results/0d3b01e8-28b1-46a8-98eb-c7752a7a8111-container.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/allure-results/0d866902-966e-407b-b238-20b74e47e181-container.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/allure-results/102eb580-52a8-4205-8df6-da5cee839db8-container.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/allure-results/123d7a1f-2d20-4d5b-b6db-ad853dede68b-container.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/allure-results/19293f41-186e-4a07-b519-c238876bb97b-attachment.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/allure-results/21c55a98-de8d-4ba5-8719-7d6ed4553e87-container.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/allure-results/243d9ea1-3e8d-46b3-b5cd-32194d201c0f-attachment.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/allure-results/261c86a0-068c-4a56-898e-42b12ca48679-container.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/allure-results/2dedd485-377c-474f-bff1-f58d2f5c4199-result.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/allure-results/3061aab2-e550-4f1f-8117-3f94e96cb33a-result.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/allure-results/3feed62b-a8b2-4562-9458-b48a2edb1684-result.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/allure-results/41ad21ff-1c00-4596-82eb-4dd5be4bc62a-attachment.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/allure-results/42125af1-da79-42a2-b335-df40acc067de-attachment.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/allure-results/4389446b-ed5f-4c24-b68d-505ac29503ae-container.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/allure-results/4afc9f5a-e442-4e8c-9045-0d24208c335e-result.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/allure-results/4b166ff2-a468-47ee-a7ce-eb7bd1c838d8-result.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/allure-results/4eb102ed-65b4-4634-ad6d-fab330da0d21-attachment.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/allure-results/50b70326-8b5d-4137-a69a-d2d1c7f27533-container.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/allure-results/564d28c8-3ea0-4563-bb07-72c2d560be54-attachment.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/allure-results/5e8ca04b-74a4-4507-b41a-22499e7bcb7c-container.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/allure-results/6461bc49-f574-4d8a-8aad-da2530518ae1-result.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/allure-results/6bad3be4-5419-4e3a-89e4-122d12eb1fe2-container.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/allure-results/71758966-d9b3-401a-a353-c19b6c3ad7f0-result.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/allure-results/75563551-bee9-4fae-9fba-84e5b717721f-result.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/allure-results/8943447c-ae21-463f-ab58-43ebfd886e6c-container.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/allure-results/8947fc12-c891-48b7-a6ad-2e2dad2fd34a-container.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/allure-results/8de37025-ed6d-4307-8175-03edded9f8ed-result.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/allure-results/8e44e898-bef0-4a9f-b927-d257b7fecacb-container.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/allure-results/a4bc2b41-d44f-40ae-9ce6-26f229a9b4bc-container.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/allure-results/a5f1b437-15ac-4e3a-be6f-039a032bb1df-container.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/allure-results/a8a61096-0e16-41e0-9f70-b94059aa473b-result.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/allure-results/a93f1f2d-790b-4591-8a37-9ca03c6006b6-attachment.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/allure-results/af6d3376-9aec-440b-9e68-ab221378a6b1-container.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/allure-results/b53e0e5b-8e9d-4aee-982d-d761366c7cda-attachment.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/allure-results/b98feed9-3cc6-4b47-a3a7-766a70d0019d-attachment.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/allure-results/bb3c747f-bf8e-4479-92b0-9fe346e99484-result.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/allure-results/bcb17cbb-e113-423a-ada7-3c96667bba9b-container.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/allure-results/bcd984fa-dbc0-4e53-8447-81c05f9a57eb-container.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/allure-results/c67a3c17-b643-4b35-942d-1637923f8909-attachment.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/allure-results/c89a1716-7928-4183-8cf5-c52447e01207-container.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/allure-results/c90380fe-33e1-4ea4-b8f0-e5bed654b267-container.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/allure-results/cbbe5a6f-3ab6-465b-8ca7-f88d63401e45-container.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/allure-results/ce18985b-8556-4a8c-9013-27bcf5284135-result.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/allure-results/d61e621d-cf2c-4aa6-8bbe-b9d95c17c658-result.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/allure-results/d6f9d051-6198-4924-91e7-ea975e4a2a31-container.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/allure-results/de44e8c3-8ec0-4b6b-bef6-2154e1a44ad7-container.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/allure-results/df053f34-12b6-4181-b7d7-f186b31ef776-attachment.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/allure-results/e01e3bed-8ece-4c9a-8757-173fef37141b-container.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/allure-results/e6d17b45-1196-49f0-8cf2-0cec350b12ed-container.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/allure-results/f2ae7464-613e-44ef-96c5-7a7a3a06c610-attachment.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/allure-results/f45efb11-dab5-4107-8bea-b4a0f9caada3-attachment.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/allure-results/fbe4fde8-25c9-4316-b80c-6adeb4b58ebf-attachment.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/allure-results/fdc18476-261a-4d71-9844-088951f3a71c-container.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/allure-results/ff677cd1-cbad-459d-a10c-fb449acba2d3-result.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/vladislav/onlinertest/core/driver/PizzaSplit.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chromedriver.log" beforeDir="false" afterPath="$PROJECT_DIR$/chromedriver.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/vladislav/onlinertest/core/driver/WebDriverFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/vladislav/onlinertest/core/driver/WebDriverFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/vladislav/onlinertest/core/element/Element.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/vladislav/onlinertest/core/element/Element.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/vladislav/onlinertest/utils/CustomWebDriverListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/vladislav/onlinertest/utils/CustomWebDriverListener.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/vladislav/onlinertest/utils/ScreenshotOnFailureExtension.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/vladislav/onlinertest/utils/ScreenshotOnFailureExtension.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <task path="$PROJECT_DIR$">
+          <activation />
+        </task>
+        <projects_view>
+          <tree_state>
+            <expand>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="OnlinerTest" type="f1a62948:ProjectNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="OnlinerTest" type="f1a62948:ProjectNode" />
+                <item name="Dependencies" type="6de06a37:ExternalSystemViewDefaultContributor$MyDependenciesNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="OnlinerTest" type="f1a62948:ProjectNode" />
+                <item name="Dependencies" type="6de06a37:ExternalSystemViewDefaultContributor$MyDependenciesNode" />
+                <item name="compileClasspath" type="62daadca:ExternalSystemViewDefaultContributor$DependencyScopeExternalSystemNode" />
+              </path>
+            </expand>
+            <select />
+          </tree_state>
+        </projects_view>
+      </state>
+    </system>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="dev" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;Uladzislau-MR&quot;
+  }
+}</component>
+  <component name="GitRewordedCommitMessages">
+    <option name="onto" value="4d7c129d50790943a93787b13c6a14b841b21069" />
+  </component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/Uladzislau-MR/OnlinerTest.git&quot;,
+    &quot;accountId&quot;: &quot;a7245345-ac78-4522-945f-de2ee3d4ca32&quot;
+  }
+}</component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;customColor&quot;: &quot;&quot;,
+  &quot;associatedIndex&quot;: 0
+}</component>
+  <component name="ProjectId" id="2zQ5sNndTsxq0aSyCoaG1suEvO8" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="autoscrollFromSource" value="true" />
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;Application.NM.executor&quot;: &quot;Run&quot;,
+    &quot;ENABLED_META&quot;: &quot;false&quot;,
+    &quot;Gradle.Download Sources.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.MainPageTest (1).executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.MainPageTest.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.MainPageTest.findProductAndVerifyName.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.MainPageTest.firstTest (1).executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.MainPageTest.firstTest.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.MainPageTest.secondTest.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.OnlinerTest [dependencies].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.SmokeTestSuite.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.MainPageTest.addingProductIntoCart.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.MainPageTest.displayingProductInCart.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.MainPageTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.MainPageTest.removingAProductFromTheCart.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.NegativeTestSuite.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.SanityTestSuite.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/Idea/AQA/OnlinerTest&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="RunManager" selected="Application.NM">
+    <configuration name="NM" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.vladislav.onlinertest.core.driver.NM" />
+      <module name="OnlinerTest.test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.vladislav.onlinertest.core.driver.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MainPageTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="OnlinerTest.test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.vladislav.onlinertest.test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.vladislav.onlinertest.test" />
+      <option name="MAIN_CLASS_NAME" value="com.vladislav.onlinertest.test.MainPageTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MainPageTest.addingProductIntoCart" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="OnlinerTest.test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.vladislav.onlinertest.test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.vladislav.onlinertest.test" />
+      <option name="MAIN_CLASS_NAME" value="com.vladislav.onlinertest.test.MainPageTest" />
+      <option name="METHOD_NAME" value="addingProductIntoCart" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MainPageTest.displayingProductInCart" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="OnlinerTest.test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.vladislav.onlinertest.test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.vladislav.onlinertest.test" />
+      <option name="MAIN_CLASS_NAME" value="com.vladislav.onlinertest.test.MainPageTest" />
+      <option name="METHOD_NAME" value="displayingProductInCart" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MainPageTest.removingAProductFromTheCart" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="OnlinerTest.test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.vladislav.onlinertest.test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.vladislav.onlinertest.test" />
+      <option name="MAIN_CLASS_NAME" value="com.vladislav.onlinertest.test.MainPageTest" />
+      <option name="METHOD_NAME" value="removingAProductFromTheCart" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.NM" />
+        <item itemvalue="JUnit.MainPageTest" />
+        <item itemvalue="JUnit.MainPageTest.addingProductIntoCart" />
+        <item itemvalue="JUnit.MainPageTest.removingAProductFromTheCart" />
+        <item itemvalue="JUnit.MainPageTest.displayingProductInCart" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-9823dce3aa75-bf35d07a577b-intellij.indexing.shared.core-IU-252.23892.409" />
+        <option value="bundled-js-predefined-d6986cc7102b-e03c56caf84a-JavaScript-IU-252.23892.409" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="94b8b672-c6d4-4ffa-8a42-500e401a2c53" name="Changes" comment="" />
+      <created>1751650666466</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1751650666466</updated>
+      <workItem from="1751650672002" duration="1200000" />
+      <workItem from="1751651911858" duration="1627000" />
+      <workItem from="1751656473046" duration="487000" />
+      <workItem from="1751657254834" duration="895000" />
+      <workItem from="1751658288701" duration="768000" />
+      <workItem from="1751660835784" duration="222000" />
+      <workItem from="1751661082899" duration="2293000" />
+      <workItem from="1751704581729" duration="4331000" />
+      <workItem from="1751713797573" duration="203000" />
+      <workItem from="1751714031551" duration="605000" />
+      <workItem from="1751714675597" duration="53000" />
+      <workItem from="1751715086059" duration="937000" />
+      <workItem from="1751720271404" duration="5824000" />
+      <workItem from="1751739645312" duration="1187000" />
+      <workItem from="1751790679405" duration="18492000" />
+      <workItem from="1751825436918" duration="13808000" />
+      <workItem from="1751868988087" duration="23715000" />
+      <workItem from="1751916207984" duration="4197000" />
+      <workItem from="1751920453675" duration="998000" />
+      <workItem from="1752001650693" duration="415000" />
+      <workItem from="1752002148040" duration="1054000" />
+      <workItem from="1752003305176" duration="43000" />
+      <workItem from="1752003708653" duration="7785000" />
+      <workItem from="1752043382919" duration="14072000" />
+      <workItem from="1752059091518" duration="345000" />
+      <workItem from="1752062198020" duration="2230000" />
+      <workItem from="1752064986215" duration="1185000" />
+      <workItem from="1752071132222" duration="3765000" />
+      <workItem from="1752214424487" duration="618000" />
+      <workItem from="1752248210078" duration="2296000" />
+      <workItem from="1752319671627" duration="2529000" />
+      <workItem from="1752347953541" duration="8442000" />
+      <workItem from="1752359274478" duration="872000" />
+      <workItem from="1752388783816" duration="14696000" />
+      <workItem from="1752409739013" duration="11728000" />
+      <workItem from="1752438134187" duration="6499000" />
+      <workItem from="1752503873150" duration="2144000" />
+      <workItem from="1752513095117" duration="1170000" />
+      <workItem from="1752514319182" duration="7045000" />
+      <workItem from="1752569572962" duration="687000" />
+      <workItem from="1752582012760" duration="16991000" />
+      <workItem from="1752663982879" duration="123000" />
+      <workItem from="1752664787776" duration="2802000" />
+      <workItem from="1752668312547" duration="4591000" />
+      <workItem from="1752693189533" duration="1405000" />
+      <workItem from="1752744721307" duration="2823000" />
+      <workItem from="1752769136179" duration="382000" />
+      <workItem from="1752837384358" duration="2561000" />
+      <workItem from="1752864696818" duration="5478000" />
+      <workItem from="1753017617818" duration="5928000" />
+      <workItem from="1753031023409" duration="1297000" />
+      <workItem from="1753176679467" duration="3084000" />
+      <workItem from="1753187859993" duration="4461000" />
+      <workItem from="1753210600598" duration="3126000" />
+      <workItem from="1753260338560" duration="557000" />
+      <workItem from="1753268444606" duration="7494000" />
+      <workItem from="1753297038162" duration="7037000" />
+      <workItem from="1753382832659" duration="1604000" />
+      <workItem from="1753438310385" duration="6804000" />
+      <workItem from="1753477441036" duration="780000" />
+      <workItem from="1753554503157" duration="1400000" />
+      <workItem from="1753557784407" duration="1496000" />
+      <workItem from="1753559320089" duration="139000" />
+      <workItem from="1753559487152" duration="103000" />
+      <workItem from="1753559637747" duration="163000" />
+      <workItem from="1753561865126" duration="7000" />
+      <workItem from="1753562048162" duration="307000" />
+      <workItem from="1753606105454" duration="1377000" />
+      <workItem from="1753610773756" duration="38000" />
+      <workItem from="1753617424010" duration="88000" />
+      <workItem from="1753728361489" duration="2265000" />
+      <workItem from="1753774464049" duration="598000" />
+      <workItem from="1753822014632" duration="585000" />
+      <workItem from="1753861922908" duration="16000" />
+      <workItem from="1753888397027" duration="589000" />
+      <workItem from="1753895650619" duration="373000" />
+      <workItem from="1757941941148" duration="718000" />
+      <workItem from="1758113831674" duration="101000" />
+      <workItem from="1758571819515" duration="1995000" />
+      <workItem from="1758623374526" duration="4546000" />
+      <workItem from="1758652797230" duration="1903000" />
+      <workItem from="1758721355173" duration="3878000" />
+      <workItem from="1758742425155" duration="3353000" />
+      <workItem from="1758815589274" duration="85000" />
+      <workItem from="1759089253783" duration="1064000" />
+      <workItem from="1759090916687" duration="21000" />
+      <workItem from="1760260214174" duration="1464000" />
+      <workItem from="1760430580471" duration="4304000" />
+      <workItem from="1761129275720" duration="2064000" />
+      <workItem from="1764421216405" duration="445000" />
+      <workItem from="1764618426067" duration="2024000" />
+      <workItem from="1764800923297" duration="2491000" />
+      <workItem from="1764933351398" duration="1476000" />
+      <workItem from="1765061227877" duration="967000" />
+      <workItem from="1765307479094" duration="3103000" />
+      <workItem from="1765562602507" duration="2252000" />
+    </task>
+    <task id="LOCAL-00001" summary="Initial commit">
+      <option name="closed" value="true" />
+      <created>1751899599139</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1751899599139</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Initial commit">
+      <option name="closed" value="true" />
+      <created>1751900564738</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1751900564738</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Fix: Corrected error in addProductToCart() method">
+      <option name="closed" value="true" />
+      <created>1751917511372</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1751917511372</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Add Allure report generation">
+      <option name="closed" value="true" />
+      <created>1751921033776</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1751921033776</updated>
+    </task>
+    <task id="LOCAL-00005" summary="09.07.2025">
+      <option name="closed" value="true" />
+      <created>1752054365236</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1752054365236</updated>
+    </task>
+    <task id="LOCAL-00006" summary="09.07.2025">
+      <option name="closed" value="true" />
+      <created>1752064624435</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1752064624435</updated>
+    </task>
+    <task id="LOCAL-00007" summary="11.07.2025">
+      <option name="closed" value="true" />
+      <created>1752253129102</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1752253129102</updated>
+    </task>
+    <task id="LOCAL-00008" summary="12.07.2025">
+      <option name="closed" value="true" />
+      <created>1752321041045</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1752321041045</updated>
+    </task>
+    <task id="LOCAL-00009" summary="12.07.2025">
+      <option name="closed" value="true" />
+      <created>1752321196188</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1752321196188</updated>
+    </task>
+    <task id="LOCAL-00010" summary="12.07.2025 21:56">
+      <option name="closed" value="true" />
+      <created>1752350237199</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1752350237199</updated>
+    </task>
+    <task id="LOCAL-00011" summary="13.07.2025 00:09">
+      <option name="closed" value="true" />
+      <created>1752358187776</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1752358187776</updated>
+    </task>
+    <task id="LOCAL-00012" summary="13.07.2025 08:55">
+      <option name="closed" value="true" />
+      <created>1752389776754</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1752389776755</updated>
+    </task>
+    <task id="LOCAL-00013" summary="13.07.2025 14:54">
+      <option name="closed" value="true" />
+      <created>1752411292161</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1752411292161</updated>
+    </task>
+    <task id="LOCAL-00014" summary="Add test for close button">
+      <option name="closed" value="true" />
+      <created>1752418230756</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1752418230756</updated>
+    </task>
+    <task id="LOCAL-00015" summary="Add test for close button">
+      <option name="closed" value="true" />
+      <created>1752418361349</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1752418361349</updated>
+    </task>
+    <task id="LOCAL-00016" summary="Add Jenkinsfile for CI pipeline">
+      <option name="closed" value="true" />
+      <created>1752440917422</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1752440917422</updated>
+    </task>
+    <task id="LOCAL-00017" summary="Test Jenkins">
+      <option name="closed" value="true" />
+      <created>1752442245837</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1752442245837</updated>
+    </task>
+    <task id="LOCAL-00018" summary="Test Jenkins">
+      <option name="closed" value="true" />
+      <created>1752443087036</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1752443087036</updated>
+    </task>
+    <task id="LOCAL-00019" summary="Test Jenkins">
+      <option name="closed" value="true" />
+      <created>1752443349151</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1752443349151</updated>
+    </task>
+    <task id="LOCAL-00020" summary="Test Jenkins">
+      <option name="closed" value="true" />
+      <created>1752444603183</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1752444603183</updated>
+    </task>
+    <task id="LOCAL-00021" summary="Test Jenkins">
+      <option name="closed" value="true" />
+      <created>1752445133136</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1752445133136</updated>
+    </task>
+    <task id="LOCAL-00022" summary="Test Jenkins">
+      <option name="closed" value="true" />
+      <created>1752509469065</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1752509469065</updated>
+    </task>
+    <task id="LOCAL-00023" summary="Test Jenkins">
+      <option name="closed" value="true" />
+      <created>1752516922117</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1752516922117</updated>
+    </task>
+    <task id="LOCAL-00024" summary="Test Jenkins">
+      <option name="closed" value="true" />
+      <created>1752521278772</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1752521278772</updated>
+    </task>
+    <task id="LOCAL-00025" summary="Test Jenkins">
+      <option name="closed" value="true" />
+      <created>1752592009604</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1752592009604</updated>
+    </task>
+    <task id="LOCAL-00026" summary="Test Jenkins">
+      <option name="closed" value="true" />
+      <created>1752666173970</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1752666173970</updated>
+    </task>
+    <task id="LOCAL-00027" summary="Test Jenkins">
+      <option name="closed" value="true" />
+      <created>1752667014734</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1752667014734</updated>
+    </task>
+    <task id="LOCAL-00028" summary="Test Jenkins">
+      <option name="closed" value="true" />
+      <created>1752669813420</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1752669813420</updated>
+    </task>
+    <task id="LOCAL-00029" summary="Test Jenkins">
+      <option name="closed" value="true" />
+      <created>1752671046021</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1752671046021</updated>
+    </task>
+    <task id="LOCAL-00030" summary="Test Jenkins">
+      <option name="closed" value="true" />
+      <created>1752671633965</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1752671633965</updated>
+    </task>
+    <task id="LOCAL-00031" summary="Test Jenkins">
+      <option name="closed" value="true" />
+      <created>1752672322250</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1752672322250</updated>
+    </task>
+    <task id="LOCAL-00032" summary="Test Jenkins">
+      <option name="closed" value="true" />
+      <created>1752745068736</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1752745068736</updated>
+    </task>
+    <task id="LOCAL-00033" summary="Test Jenkins">
+      <option name="closed" value="true" />
+      <created>1752747948867</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1752747948867</updated>
+    </task>
+    <task id="LOCAL-00034" summary="Improve test logic">
+      <option name="closed" value="true" />
+      <created>1753031717859</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1753031717859</updated>
+    </task>
+    <option name="localTasksCounter" value="35" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="dev" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="Initial commit" />
+    <MESSAGE value="Fix: Corrected error in addProductToCart() method" />
+    <MESSAGE value="Add Allure report generation" />
+    <MESSAGE value="09.07.2025" />
+    <MESSAGE value="11.07.2025" />
+    <MESSAGE value="12.07.2025" />
+    <MESSAGE value="12.07.2025 21:56" />
+    <MESSAGE value="13.07.2025 00:09" />
+    <MESSAGE value="13.07.2025 08:55" />
+    <MESSAGE value="13.07.2025 14:54" />
+    <MESSAGE value="Add test for close button" />
+    <MESSAGE value="squash! 13.07.2025 00:09" />
+    <MESSAGE value="Add Jenkinsfile for CI pipeline" />
+    <MESSAGE value="Test Jenkins" />
+    <MESSAGE value="Improve test logic" />
+    <option name="LAST_COMMIT_MESSAGE" value="Improve test logic" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/com/vladislav/onlinertest/core/element/Element.java</url>
+          <line>38</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>

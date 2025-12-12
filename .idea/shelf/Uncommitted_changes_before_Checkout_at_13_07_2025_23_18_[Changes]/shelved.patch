@@ -1,0 +1,32 @@
+Index: src/test/java/com/vladislav/onlinertest/test/MainPageTest.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package com.vladislav.onlinertest.test;\r\n\r\n\r\nimport com.vladislav.onlinertest.core.driver.WebDriverSingleton;\r\nimport com.vladislav.onlinertest.pages.CartPage;\r\nimport com.vladislav.onlinertest.pages.ProductPricesPage;\r\nimport com.vladislav.onlinertest.pages.SearchResultsPage;\r\nimport org.junit.jupiter.api.Assertions;\r\nimport org.junit.jupiter.api.BeforeEach;\r\nimport org.junit.jupiter.api.Test;\r\nimport org.openqa.selenium.WebDriver;\r\n\r\nimport com.vladislav.onlinertest.pages.MainPage;\r\npublic class MainPageTest {\r\n\r\n    private WebDriver driver;\r\n    private MainPage mainPage;\r\n    ProductPricesPage productPricesPage;\r\n    CartPage cartPage;\r\n    @BeforeEach\r\n    public void setup() {\r\n        this.driver = WebDriverSingleton.getDriver();\r\n        this.mainPage = new MainPage();\r\n        this.productPricesPage = new ProductPricesPage();\r\n        this.cartPage = new CartPage();\r\n        driver.get(\"https://www.onliner.by\");\r\n\r\n        }\r\n\r\n\r\n    @Test\r\n    public void secondTest() {\r\n\r\n        String expectedProductName = \"Телефон Samsung Galaxy S25 SM-S931B 12GB/128GB (голубой)\";\r\n        SearchResultsPage resultsPage = mainPage.inputText(expectedProductName);\r\n        String actualProductName = resultsPage.getActualProductName();\r\n        System.out.println(actualProductName);\r\n        resultsPage.openProductPricesPage(expectedProductName);\r\n\r\n        productPricesPage.addProductToCart();\r\n        productPricesPage.openCart();\r\n        cartPage.removeFirstProduct();\r\n\r\n        Assertions.assertEquals(\r\n                expectedProductName,\r\n                actualProductName,\r\n                \"Название найденного товара не совпадает с искомым.\"\r\n        );\r\n    }\r\n\r\n//    @AfterEach\r\n//    public void tearDown() {\r\n//    WebDriverSingleton.closeDriver();\r\n//    }\r\n}
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/test/java/com/vladislav/onlinertest/test/MainPageTest.java b/src/test/java/com/vladislav/onlinertest/test/MainPageTest.java
+--- a/src/test/java/com/vladislav/onlinertest/test/MainPageTest.java	
++++ b/src/test/java/com/vladislav/onlinertest/test/MainPageTest.java	
+@@ -1,16 +1,19 @@
+ package com.vladislav.onlinertest.test;
+ 
+ 
++
++
+ import com.vladislav.onlinertest.core.driver.WebDriverSingleton;
++import com.vladislav.onlinertest.models.pages.MainPage;
++import com.vladislav.onlinertest.models.pages.SearchResultsPage;
+ import com.vladislav.onlinertest.pages.CartPage;
+ import com.vladislav.onlinertest.pages.ProductPricesPage;
+-import com.vladislav.onlinertest.pages.SearchResultsPage;
+ import org.junit.jupiter.api.Assertions;
+ import org.junit.jupiter.api.BeforeEach;
+ import org.junit.jupiter.api.Test;
+ import org.openqa.selenium.WebDriver;
+ 
+-import com.vladislav.onlinertest.pages.MainPage;
++
+ public class MainPageTest {
+ 
+     private WebDriver driver;
